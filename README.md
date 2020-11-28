@@ -1,1 +1,1 @@
-# angularBlogPessoal
+# blogPessoal
