@@ -1,43 +1,59 @@
+<!--Container da pagina Cadastro-->
 <div class="container">
+    <!--Row que engloba titulo-->
     <div class="row mt-5 mb-5">
         <div class="col-md-12">
             <h1 class="text-center">Cadastrar</h1>
         </div>
     </div>
+    <!--/Row que engloba titulo-->
+
+    <!--Row principal da pagina de cadastro-->
     <div class="row mb-5 d-flex justify-content-center">
         <div class="col-md-8">
             <div>
+                <!--Form nome-->
                 <div class="form-group">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui"
                         [(ngModel)]='user.nome'>
                 </div>
+                <!--/Form nome-->
 
+                <!--Form email-->
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com"
                         [(ngModel)]='user.usuario'>
                 </div>
+                <!--/Form nome-->
 
+                <!--Form senha-->
                 <div class="form-group">
                     <label for="senha">Senha</label>
                     <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
                         (input)='conferirSenha($event)' value='{{senha}}'>
                 </div>
+                <!--/Form senha-->
 
+                <!--Form confirm senha-->
                 <div class="form-group">
                     <label for="senhaConf">Confirmar Senha</label>
                     <input type="password" class="form-control" id="senhaConf"
                         placeholder="Digite a confirmação da senha" [(ngModel)]='user.senha'>
                 </div>
-
+                <!--Form confirm senha-->
+                
+                <!--Button Cadastrar-->
                 <div class="d-flex justify-content-center">
                     <button class="btn btn-outline-success w-25" (click)='cadastrar()'>Cadastrar </button>
                 </div>
-
+                <!--Button Cadastrar-->
 
             </div>
         </div>
     </div>
+     <!--/Row principal da pagina de cadastro-->
 
 </div>
+<!--/Container da pagina Cadastro-->
