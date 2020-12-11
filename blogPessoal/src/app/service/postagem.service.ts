@@ -15,22 +15,22 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('http://localhost:9000/postegens', this.token)
+    return this.http.get<Postagem[]>('http://localhost:8080/postegens', this.token)
   }
 
   getByIdPostagens(id: number): Observable<Postagem> {
-    return this.http.get<Postagem>(`http://localhost:9000/postegens/${id}`, this.token)
+    return this.http.get<Postagem>(`http://localhost:8080/postegens/${id}`, this.token)
   }
 
   postPostagem(postagem: Postagem):Observable<Postagem> {
-    return this.http.post<Postagem>('http://localhost:9000/postegens', postagem, this.token)
+    return this.http.post<Postagem>('http://localhost:8080/postagens', postagem, this.token)
   }
 
   putPostagem(postagem: Postagem):Observable<Postagem> {
-    return this.http.put<Postagem>('http://localhost:9000/postegens', postagem, this.token)
+    return this.http.put<Postagem>('http://localhost:8080/postegens', postagem, this.token)
   }
 
   deletePostagem(id: number): Observable<Postagem> {
-    return this.http.delete <Postagem>(`http://localhost:9000/postegens/${id}`, this.token)
+    return this.http.delete <Postagem>(`http://localhost:8080/postegens/${id}`, this.token)
   }
 }
